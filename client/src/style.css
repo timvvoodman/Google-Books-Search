@@ -1,0 +1,42 @@
+.top-nav {
+  background-color: orangered;
+  height: 2.5rem;
+  border-bottom: solid black 2px;
+}
+
+.top-nav > a {
+  padding: 1rem;
+}
+.item1 {
+  grid-area: header;
+  text-align: center;
+  background-color: lightgreen;
+}
+.item2 {
+  grid-area: search;
+  background-color: cadetblue;
+}
+
+.item3 {
+  grid-area: results;
+  background-color: palevioletred;
+}
+
+.grid-containter {
+  display: grid;
+  grid-template-areas:
+    "header, header, header, header, header, header"
+    "search, search, search, search, search, search"
+    "results, results, results, results, results, results";
+  grid-gap: 15px;
+  background-color: black;
+  padding: 10px;
+}
+
+.grid-container > div {
+  padding: 20px 0;
+}
+
+.jumbotron {
+  margin: 1rem;
+}
