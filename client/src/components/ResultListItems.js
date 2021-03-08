@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import ViewBtn from "./ViewBtn";
+import SearchContext from "../utils/SearchContext";
 
 function ResultListItems() {
+  const { books } = useContext(SearchContext);
+
   return (
     <>
       <ViewBtn />
