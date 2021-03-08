@@ -11,8 +11,8 @@ function SearchBooks() {
     search: "",
   });
 
-  function loadBooks(query) {
-    API.getBooks(query)
+  function loadBooks() {
+    API.getBooks(formObject.search)
       .then((res) => setBooks(res.data))
       .catch((err) => console.log(err));
   }
@@ -26,7 +26,7 @@ function SearchBooks() {
 
   function handleSearchSubmit(event) {
     event.preventDefault();
-    loadBooks(formObject.search);
+    loadBooks();
     console.log(books);
   }
 
