@@ -1,23 +1,19 @@
 .top-nav {
-  background-color: orangered;
-  height: 2.5rem;
-  border-bottom: solid black 2px;
+  height: 2 rem;
+  border-bottom: solid grey 1px;
 }
 
-.top-nav > a {
-  padding: 1rem;
-}
-.item1 {
+.header {
   grid-area: header;
   text-align: center;
   background-color: lightgreen;
 }
-.item2 {
+.searchArea {
   grid-area: search;
   background-color: cadetblue;
 }
 
-.item3 {
+.resultsList {
   grid-area: results;
   background-color: palevioletred;
 }
