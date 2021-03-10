@@ -1,21 +1,69 @@
-.top-nav {
-  height: 2 rem;
-  border-bottom: solid grey 1px;
+body {
+  padding: 0;
+  margin: 0.625rem;
+}
+
+nav {
+  text-align: start;
+  padding: 0.2rem;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  padding: 0.5rem 0.5rem;
+}
+
+nav a {
+  font-weight: normal;
+  padding: 0.625rem 0.313rem;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+nav a:hover {
+  cursor: pointer;
+  color: blue;
 }
 
 .header {
   grid-area: header;
   text-align: center;
-  background-color: lightgreen;
+  border: 2px solid grey;
+  margin-bottom: 0.625rem;
+  margin-top: 1rem;
 }
 .searchArea {
   grid-area: search;
-  background-color: cadetblue;
+  text-align: center;
+  border: 2px solid grey;
+  margin-bottom: 1rem;
+}
+
+input {
+  height: 1.25rem;
+  border: 2px solid grey;
+  margin-bottom: 0.625rem;
 }
 
 .resultsList {
   grid-area: results;
-  background-color: palevioletred;
+  border: 2px solid grey;
+}
+
+.resultsEach {
+  list-style: none;
+}
+
+.resultsEach li {
+  border: 2px solid grey;
+  padding: 0.625rem;
 }
 
 .grid-containter {
@@ -26,11 +74,11 @@
     "results, results, results, results, results, results";
   grid-gap: 15px;
   background-color: black;
-  padding: 10px;
+  padding: 0.313rem;
 }
 
 .grid-container > div {
-  padding: 20px 0;
+  padding: 0.313rem 0.625rem;
 }
 
 .jumbotron {

@@ -61,7 +61,7 @@ function SearchBooks() {
           <FormBtn onClick={handleSearchSubmit}>Search</FormBtn>
         </div>
         <div className="resultsList">
-          <h4>Results</h4>
+          <h2>Results</h2>
           <List>
             {books.map((book) => {
               return (

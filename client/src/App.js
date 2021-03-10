@@ -8,11 +8,12 @@ import SavedBooks from "./components/pages/SavedBooks";
 function App() {
   return (
     <Router>
-      <div>
+      <>
         <TopNav />
+        <hr></hr>
         <Route exact path="/" component={SearchBooks} />
         <Route exact path="/saved" component={SavedBooks} />
-      </div>
+      </>
     </Router>
   );
 }

@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "react google books api interface",
   "main": "server.js",
+  "engines": {
+    "node": "14.15.0"
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "express": "^4.17.1",
@@ -22,7 +25,6 @@
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
-    "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
