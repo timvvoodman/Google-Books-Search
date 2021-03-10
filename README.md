@@ -1,9 +1,9 @@
 # 🏆 Google Books Reading List 🏆
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-[![Size](https://img.shields.io/github/repo-size/timvvoodman/Google-Books-Search)
-[![Language](https://img.shields.io/github/languages/top/timvvoodman/Google-Books-Search)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Size](https://img.shields.io/github/repo-size/timvvoodman/Google-Books-Search)
+![Language](https://img.shields.io/github/languages/top/timvvoodman/Google-Books-Search)
 
 ## Application Description
 
