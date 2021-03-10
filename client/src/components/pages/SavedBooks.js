@@ -24,7 +24,6 @@ function SavedBooks() {
 
   //Delete book from saved list(database)
   function deleteBook(id) {
-    console.log("clicked " + id);
     API.deleteBook(id)
       .then((res) => loadSavedBooks())
       .catch((err) => console.log(err));

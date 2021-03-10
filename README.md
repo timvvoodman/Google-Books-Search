@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# 🏆 Google Books Reading List 🏆
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+[![Size](https://img.shields.io/github/repo-size/timvvoodman/Google-Books-Search)
+[![Language](https://img.shields.io/github/languages/top/timvvoodman/Google-Books-Search)
 
-## Available Scripts
+## Application Description
 
-In the project directory, you can run:
+Usine the Google Books API the user can seach for books, save them to their personal reading list, click to view additional book info/preview at the Google Books site.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Demo](#demo)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [Contact Information](#contact-information)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Demo
 
-### `npm test`
+View the application at [Deployed Project Link](https://tw-google-books-list.herokuapp.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technology Stack
 
-### `npm run build`
+- MongoDB
+- Express
+- React
+- Nodejs
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Fork repo and create new branch
+2. in the command line at the root level of repo run `npm install`
+3. Ensure MongoDB is installed: [Instructions Here](https://docs.mongodb.com/manual/installation/)
+4. in the root folder of the repo, run `npm install` in the command line
+5. start the React and Node Server with `npm start :dev`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `npm run eject`
+1. Fork this repository
+2. Create a new branch
+3. Commit/push your changes
+4. Create a new pull request. _Please email me if I do not respond to your pull request_
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[Contributor Covenant](https://www.contributor-covenant.org/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contact Information
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Please direct all questions regarding this project to timothyrwoodman@gmail.com, Thank You!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[My GitHub](https://github.com/timvvoodman)

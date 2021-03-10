@@ -28,7 +28,6 @@ function SearchBooks() {
   const handleSearchInput = (event) => {
     const input = event.target.value;
     setSearch(input);
-    console.log(search);
   };
 
   //Save Book to DB Functionality
@@ -42,9 +41,7 @@ function SearchBooks() {
       description: book.volumeInfo.description,
       cover: book.volumeInfo.imageLinks.thumbnail,
       link: book.volumeInfo.infoLink,
-    }).then(() =>
-      console.log(`Saved ${book.volumeInfo.title} to your Reading list`)
-    );
+    });
   };
 
   return (
