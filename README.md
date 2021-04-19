@@ -19,7 +19,7 @@ Usine the Google Books API the user can seach for books, save them to their pers
 
 ## Demo
 
-View the application at [Deployed Project Link](https://tw-google-books-list.herokuapp.com/)
+View the deployed application [Here!](https://tw-google-books-list.herokuapp.com/)
 
 ## Technology Stack
 
