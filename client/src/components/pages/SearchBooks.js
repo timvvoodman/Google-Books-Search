@@ -1,55 +1,63 @@
-import React, { useState } from "react";
-import API from "../../utils/API";
-import { Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input, FormBtn } from "../../components/Form";
-import Jumbotron from "../Jumbotron";
+import React, { useState } from 'react'
+import API from '../../utils/API'
+import { Container } from '../../components/Grid'
+import { List, ResultItem } from '../../components/List'
+import { Input, FormBtn } from '../../components/Form'
 
 function SearchBooks() {
   //State for holding return of Google Books API Search
-  const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState([])
   //Search Form State
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('')
 
   //Get books function and handle click that executes from UI click
   function loadBooks(query) {
     API.getBooks(query)
       .then((res) => setBooks(res.data.items))
-      .catch((err) => console.log(err));
-    console.log(books);
+      .catch((err) => console.log(err))
+    console.log(books)
   }
 
   const handleSearchSubmit = (event) => {
-    event.preventDefault();
-    loadBooks(search);
-  };
+    event.preventDefault()
+    loadBooks(search)
+  }
 
   //updates search state
   const handleSearchInput = (event) => {
-    const input = event.target.value;
-    setSearch(input);
-  };
+    const input = event.target.value
+    setSearch(input)
+  }
 
   //Save Book to DB Functionality
 
   const saveBooktToDB = (id) => {
-    const book = books.find((book) => book.id === id);
+    const book = books.find((book) => book.id === id)
     API.saveBook({
       googleId: book.etag,
       title: book.volumeInfo.title,
       authors: book.volumeInfo.authors,
-      description: book.volumeInfo.description,
+      description: checkForDescription(id),
       cover: book.volumeInfo.imageLinks.thumbnail,
       link: book.volumeInfo.infoLink,
-    });
-  };
+    })
+  }
+
+  function checkForDescription(id) {
+    const book = books.find((book) => book.id === id)
+
+    if (book.searchInfo) {
+      return book.searchInfo.textSnippet
+    }
+
+    return 'No Description Available.'
+  }
 
   return (
     <>
       <Container>
-        <Jumbotron />
         <div className="searchArea">
-          <h4>Search The Google Book Library</h4>
+          <h1>Search For Books</h1>
           <Input
             onChange={handleSearchInput}
             placeholder="search by title"
@@ -58,30 +66,33 @@ function SearchBooks() {
           <FormBtn onClick={handleSearchSubmit}>Search</FormBtn>
         </div>
         <div className="resultsList">
-          <h2>Results</h2>
           <List>
             {books.map((book) => {
               return (
-                <ListItem
+                <ResultItem
                   key={book.etag}
                   title={book.volumeInfo.title}
-                  author={book.volumeInfo.authors}
+                  author={book.volumeInfo.authors.join(', ')}
                   cover={
                     book.volumeInfo.imageLinks
                       ? book.volumeInfo.imageLinks.thumbnail
-                      : "https://via.placeholder.com/128x206.png?text=No+Cover+Available"
+                      : 'https://via.placeholder.com/128x206.png?text=No+Cover+Available'
                   }
-                  description={book.volumeInfo.description}
+                  description={
+                    book.searchInfo
+                      ? book.searchInfo.textSnippet
+                      : 'No description available'
+                  }
                   href={book.volumeInfo.infoLink}
                   onClick={() => saveBooktToDB(book.id)}
                 />
-              );
+              )
             })}
           </List>
         </div>
       </Container>
     </>
-  );
+  )
 }
 
-export default SearchBooks;
+export default SearchBooks

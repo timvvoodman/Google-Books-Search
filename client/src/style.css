@@ -1,86 +1,170 @@
+/* Variables */
+
 body {
-  padding: 0;
-  margin: 0.625rem;
-}
-
-nav {
-  text-align: start;
-  padding: 0.2rem;
-}
-nav ul {
-  list-style: none;
+  background-color: var(--primary-color);
+  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  height: 100%;
 }
 
-nav li {
-  display: inline-block;
-  padding: 0.5rem 0.5rem;
+/****** Nav Styles ******/
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 7vh;
+  padding: 10px;
 }
 
-nav a {
-  font-weight: normal;
+.nav-link {
   padding: 0.625rem 0.313rem;
-  font-size: 18px;
+  font-size: 14px;
   color: black;
   text-decoration: none;
-  font-weight: bolder;
+  padding: 5;
+  margin: 0 5px 0 15px;
 }
 
 nav a:hover {
-  cursor: pointer;
-  color: blue;
+  text-decoration: underline;
 }
 
-.header {
-  grid-area: header;
-  text-align: center;
-  border: 2px solid grey;
-  margin-bottom: 0.625rem;
-  margin-top: 1rem;
-}
+/****** Search Area ******/
+
 .searchArea {
-  grid-area: search;
-  text-align: center;
-  border: 2px solid grey;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 1rem 5rem 1rem;
 }
 
-input {
+.searchArea h1 {
+  margin-bottom: 2.5rem;
+  color: black;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  width: 40vw;
+  border: 1px solid lightgray;
+  border-radius: 24px;
+  padding: 0.5rem;
+  position: relative;
   height: 1.25rem;
-  border: 2px solid grey;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.75rem;
 }
 
-.resultsList {
-  grid-area: results;
-  border: 2px solid grey;
+.searchContainer span {
+  margin: 0 5px;
+  color: grey;
 }
 
-.resultsEach {
+.searchContainer input {
+  border: 0;
+  background-color: var(--secondary-color);
+}
+
+.searchContainer input:focus {
+  outline: none;
+}
+
+.searchContainer:hover,
+.searchContainer:focus {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  outline: none !important;
+}
+
+.searchArea button {
+  background-color: #4285f4;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.searchArea button:focus {
+  outline: none !important;
+}
+
+.searchArea button:active {
+  transform: scaleX(0.98);
+}
+
+/****** results ******/
+
+.resultsEach ul {
   list-style: none;
 }
 
 .resultsEach li {
-  border: 2px solid grey;
   padding: 0.625rem;
 }
 
-.grid-containter {
-  display: grid;
-  grid-template-areas:
-    "header, header, header, header, header, header"
-    "search, search, search, search, search, search"
-    "results, results, results, results, results, results";
-  grid-gap: 15px;
-  background-color: black;
-  padding: 0.313rem;
+.resultContainer {
+  display: flex;
+
+  font-size: 14px;
+  margin-bottom: 18px;
 }
 
-.grid-container > div {
-  padding: 0.313rem 0.625rem;
+.resultContainer img {
+  height: 160px;
+  width: 100px;
+  margin-right: 1.5rem;
 }
 
-.jumbotron {
-  margin: 1rem;
+.result-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.result-info h3 {
+  margin: 0;
+}
+
+.resultContainer h3 {
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+}
+
+.result-button-container {
+  display: flex;
+}
+
+.result-button {
+  margin: 0 10px;
+  background-color: #4285f4;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.result-button:focus,
+.result-button:active {
+  outline: none !important;
+}
+
+.result-button:active {
+  transform: scaleX(0.98);
+}
+
+/******Saved Books ******/
+
+.resultsList h1 {
+  text-align: center;
+  margin: 2.5rem 2rem;
+}
+
+.result-button.delete {
+  background-color: red;
 }

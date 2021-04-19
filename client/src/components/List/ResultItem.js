@@ -1,13 +1,12 @@
 import React from 'react'
 import { FormBtn } from '../Form'
 
-export function SavedListItem({
+export function ResultItem({
   title,
   author,
   cover,
   description,
   onClick,
-  id,
   href,
 }) {
   return (
@@ -21,12 +20,8 @@ export function SavedListItem({
           <h5>{author}</h5>
           <p>{description}</p>
           <div className="result-button-container">
-            <FormBtn
-              className="result-button delete"
-              onClick={onClick}
-              type="button"
-            >
-              Delete
+            <FormBtn className="result-button" onClick={onClick} type="button">
+              Save
             </FormBtn>
             <form action={href}>
               <input className="result-button" type="submit" value="View" />
@@ -37,3 +32,5 @@ export function SavedListItem({
     </li>
   )
 }
+
+export default ResultItem
